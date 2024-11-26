@@ -9,19 +9,31 @@
 body {
     background-color: black;
     color: white;
-    margin: 8px 16px;
+    margin: 8px 40px;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
 }
 
 .hero {
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(Media/NG-en-20241118-TRIFECTA-perspective_05e9bbd9-8f9f-4bda-818a-4e3fa8b1124b_large.jpg);
-    background-size:cover;
+    background-size: cover;
     background-position: center;
     padding: 10px 8px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.reason-icon svg{
+    width: 56px;
+    height: 56px;
 }
 
 nav {
@@ -39,6 +51,9 @@ nav {
 nav button {
     border: 0;
     outline: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
     background: white;
     color: black;
     padding: 12px 24px;
@@ -78,7 +93,7 @@ nav button {
 
 .hero h1 {
     font-size: 64px;
-    line-height: 72px;
+    line-height: 80px;
     font-weight: 600;
     max-width: 650px;
 }
@@ -87,13 +102,14 @@ nav button {
     font-size: 600;
     margin-bottom: 20px;
 }
-.hero-text{
+
+.hero-text {
     margin-top: 40px;
 }
 
 .email-signup {
     border-radius: 4px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     width: 640px;
     align-items: center;
@@ -112,10 +128,17 @@ nav button {
     margin-left: 20px;
 }
 
+:placeholder-shown{
+    opacity: 60%;
+}
+
 .email-signup button {
     background: red;
     border: 0;
     outline: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     border-radius: 32px;
     margin-left: 8px;
     color: white;
@@ -132,13 +155,22 @@ nav button {
 
 /* CHANGE ICON COLOR TO WHITE  */
 
-.row{
-    margin-bottom: 8px;
+.row {
+    margin-bottom: 16px;
 }
-.cards{
+
+.features {
+    margin-top: 16px;
+    margin-bottom: 56px;
+}
+
+.cards {
     display: flex;
-    overflow-y: auto;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+
 .cards img {
     border-radius: 8px;
     width: 200px;
@@ -147,6 +179,68 @@ nav button {
     cursor: pointer;
 }
 
+/* REASONS TO JOIN */
+
+.reason-cards .reason{
+    background-color: rgba(63, 63, 63, 0.703);
+    border:  1px rgba(128, 128, 128, 0.4) solid;
+    border-radius: 8px;
+    padding: 16px 16px;
+    flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.reasons{
+    margin-bottom: 32px;
+}
+
+.reason-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.reason-cards .reason-icon{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* FAQ AREA */
+.faqs{
+    margin: 32px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-contain{
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.faq-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 24px;
+    border-radius: 8px;
+    background-color: rgba(63, 63, 63, 0.703);
+    border: 1px rgba(128, 128, 128, 0.4) solid;
+    cursor: pointer;
+}
+
+.faq-block svg{
+    width: 48px;
+    height: 28px;
+    stroke-width: 1px;
+    fill: white;
+}
+
+/* MEDIA */
 @media (min-width:1024px) {
     .hero {
         height: fit-content;
