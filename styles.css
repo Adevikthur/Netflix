@@ -275,7 +275,8 @@ nav button {
 
 /* Got Questions */
 .questions {
-    color: #adb5bd margin-top: 16px;
+    color: #adb5bd;
+    margin-top: 16px;
     margin-bottom: 56px;
 }
 
