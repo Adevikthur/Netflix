@@ -275,7 +275,7 @@ nav button {
 
 /* Got Questions */
 .questions {
-    margin-top: 16px;
+    color: #adb5bd margin-top: 16px;
     margin-bottom: 56px;
 }
 
@@ -294,7 +294,8 @@ nav button {
 .footer {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 32px;
+    margin-bottom: 40px;
 }
 
 .nav-links div {
@@ -303,12 +304,17 @@ nav button {
 
 }
 
-.nav-links ul,
-li {
+.nav-links li {
     list-style-type: none;
     margin-bottom: 16px;
     cursor: pointer;
-    color: gainsboro;
+    color: #adb5bd;
+}
+
+.nav-links ul li :hover {
+    color: white;
+    cursor: pointer;
+
 }
 
 .footer button {
@@ -317,13 +323,14 @@ li {
     background-color: black;
     display: flex;
     flex-direction: row;
-    gap: 8px;
+    gap: 16px;
     display: inline-flex;
     align-items: center;
+    justify-content: space-between;
     border-radius: 32px;
     font-size: 12px;
     cursor: pointer;
-    padding: 12px 24px;
+    padding: 8px 16px;
 }
 
 .footer button svg {
