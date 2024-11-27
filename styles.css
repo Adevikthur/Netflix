@@ -26,17 +26,38 @@ svg {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(Media/NG-en-20241118-TRIFECTA-perspective_05e9bbd9-8f9f-4bda-818a-4e3fa8b1124b_large.jpg);
     background-size: cover;
     background-position: center;
-    padding: 10px 8px;
-    margin-bottom: 40px;
+    padding: 120px 40px;
+    border-radius: 16px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-end;
+    border: 1px solid gray;
+        
 }
 
-.reason-icon svg {
-    width: 56px;
-    height: 56px;
+.bg-img{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(Media/NG-en-20241118-TRIFECTA-perspective_05e9bbd9-8f9f-4bda-818a-4e3fa8b1124b_large.jpg);
+    z-index: -1;
+    filter: blur(150px);
+    width: 100%;
+    position: absolute;
 }
+
+.hero-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    align-items: center;
+
+}
+
+
 
 nav {
     display: flex;
@@ -103,13 +124,11 @@ nav button {
     margin-bottom: 20px;
 }
 
-.hero-text {
-    margin-top: 40px;
-}
 
 .email-signup {
     border-radius: 4px;
     display: flex;
+    gap: 12px;
     justify-content: space-between;
     width: 640px;
     align-items: center;
@@ -119,18 +138,14 @@ nav button {
 
 .email-signup input {
     flex: 1;
-    background: black;
+    background: rgba(0, 0, 0, 0.3);
     color: white;
     border: 1px white solid;
     outline: 0;
     padding: 16px 16px 16px 12px;
     border-radius: 32px;
-    margin-left: 20px;
 }
 
-:placeholder-shown {
-    opacity: 60%;
-}
 
 .email-signup button {
     background: red;
@@ -140,7 +155,6 @@ nav button {
     align-items: center;
     gap: 8px;
     border-radius: 32px;
-    margin-left: 8px;
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -150,32 +164,39 @@ nav button {
 .email-signup img {
     width: 10px;
     color: white;
-    margin-left: 8px;
 }
 
 /* MOVIES FEATURE */
-.row {
-    margin-bottom: 16px;
+.body-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 40px 160px;
 }
 
 .features {
-    margin-top: 16px;
-    margin-bottom: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .cards {
     display: flex;
     overflow-y: scroll;
+    gap: 20px;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
+.cards :hover {
+    background-color: whitesmoke;
+}
+
 .cards img {
-    border-radius: 8px;
+    border-radius: 16px;
     width: 200px;
-    height: 100;
-    margin-right: 12px;
     cursor: pointer;
+    padding: 2px;
 }
 
 /* REASONS TO JOIN */
@@ -189,12 +210,21 @@ nav button {
     flex-basis: 0;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    justify-content: space-between;
+}
+.reason h4{
+    max-width: 200px;
 }
 
 .reasons {
-    margin-top: 16px;
-    margin-bottom: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.reason-icon svg {
+    width: 56px;
+    height: 56px;
 }
 
 .reason-cards {
@@ -252,12 +282,16 @@ nav button {
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    margin-top: 16px;
-    margin-bottom: 56px;
 }
 
 .cta p {
     cursor: pointer;
+    display: flex;
+}
+
+.cta p :hover {
+    display: flex;
+    color: #adb5bd;
 }
 
 .cta button {
@@ -307,7 +341,6 @@ nav button {
 
 .nav-links li {
     list-style-type: none;
-    margin-bottom: 16px;
     cursor: pointer;
     color: #adb5bd;
 }
@@ -345,7 +378,12 @@ nav button {
 @media (min-width:1024px) {
     .hero {
         height: fit-content;
+    }
 
-
+    .body-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding: 0 80px;
     }
 }
