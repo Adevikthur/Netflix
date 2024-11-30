@@ -50,7 +50,7 @@ body {
     align-items: center;
     gap: 16px;
     padding: 16px 0;
-    width: 100%;
+    width: fit-content;
 
 }
 
